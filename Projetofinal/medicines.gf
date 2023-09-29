@@ -21,7 +21,7 @@ abstract medicines = {
         Freq : Frequency -> Frequency ;
         -- Function to modify the frequency
 
-        One, Two, Three, Four, Six, Eight, Twelve, TwentyFour, TwoDays, ThreeDays, OneWeek : Frequency ;
+        One, Two, Three, Four, Six, Eight, Twelve, TwentyFour,Day, TwoDays, ThreeDays, OneWeek : Frequency ;
         -- Specific frequency values for hours, days, and weeks
 
         OneUnit, TwoUnits :Quantity;

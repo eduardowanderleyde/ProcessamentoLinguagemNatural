@@ -1,43 +1,43 @@
-concrete medicineCon of medicines = {
+concrete medicineCon of medicines = open  StringOper in {
+  
 
     lincat
         Phrase, Verb, Drug, Frequency, Quantity = {s : Str} ;
 
     lin
         -- Ways to administer the medicine
-        Do verb quantity frequency = {s = verb.s ++ quantity.s ++ " for " ++ frequency.s} ;
+        Do verb quantity frequency = ss (verb.s ++ quantity.s ++ " for each" ++ frequency.s) ;
         -- Expresses an action with a specific frequency
 
-        Take drug = {s = "take " ++ drug.s} ;
+        Take drug = ss ("take" ++ drug.s);   --{s = "take " ++ drug.s} ;
         -- Indicates taking a specific drug
 
-        Inject drug = {s = "inject " ++ drug.s} ;
+        Inject drug = ss ("inject " ++ drug.s) ;
         -- Indicates injecting a specific drug
 
-        OneUnit  = {s ="one unit"} ;
-        TwoUnits  = {s = "two units"} ;
+        --Quantities
+        OneUnit = ss "one unit" ;
+        TwoUnits = ss "two units" ;
 
         -- Medicines
-        Tablet = {s = "tablet"} ;
-        Capsule = {s = "capsule"} ;
-        Ampoule = {s = "ampoule"} ;
-        Syrup = {s = "syrup"} ;
+        Tablet = ss "tablet" ;
+        Capsule = ss "capsule" ;
+        Ampoule = ss "ampoule" ;
+        Syrup = ss "syrup";
 
         -- Frequencies
-        One = {s = "one in one hour"} ;
-        Two = {s = "two in two hours"} ;
-        Three = {s = "three in three hours"} ;
-        Four = {s = "four in four hours"} ;
-        Six = {s = "six in six hours"} ;
-        Eight = {s = "eight in eight hours"} ;
-        Twelve = {s = "twelve in twelve hours"} ;
-        TwentyFour = {s = "twenty-four in twenty-four hours"} ;
-        TwoDays = {s = "two days"} ;
-        ThreeDays = {s = "three days"} ;
-        OneWeek = {s = "one week"} ;
+        One = ss "one hour" ;
+        Two = ss "two hours" ;
+        Three = ss "three hours" ;
+        Four = ss "four hours" ;
+        Six = ss "six hours" ;
+        Eight = ss "eight hours" ;
+        Twelve = ss "twelve hours" ;
+        TwentyFour = ss "twenty-four hours" ;
+        Day = ss "day" ;	
+        TwoDays = ss "two days";
+        ThreeDays = ss "three days" ;
+        OneWeek = ss "one week" ;
 
-        --Quantities
-        OneUnit = {s = "one unit"} ;
-        TwoUnits = {s = "two units"} ;
         
 }
